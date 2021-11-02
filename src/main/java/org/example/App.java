@@ -45,8 +45,9 @@ public class App
 
             Thread.sleep(300);
 
-            serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
-                    SerialPort.FLOWCONTROL_RTSCTS_OUT);
+            serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_NONE);
+//            serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
+//                    SerialPort.FLOWCONTROL_RTSCTS_OUT);
 
             Thread.sleep(300);
 
