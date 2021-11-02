@@ -45,13 +45,11 @@ public class App
 
             Thread.sleep(300);
 
-            serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN);
+            serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
+                    SerialPort.FLOWCONTROL_RTSCTS_OUT);
 
             Thread.sleep(300);
 
-
-//            serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_RTSCTS_IN |
-//                    SerialPort.FLOWCONTROL_RTSCTS_OUT);
             serialPort.addEventListener(new SerialPortEventListener() {
                 @Override
                 public void serialEvent(SerialPortEvent serialPortEvent) {
